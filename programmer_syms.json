@@ -1,0 +1,252 @@
+{
+  "title": "Symbol Assist for Programmers",
+  "rules": [{
+    "description": "英数キーによるシフトで、記号入力を省力化する",
+    "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "japanese_eisuu",
+          "modifiers": {
+            "optional": ["any"]
+          }
+        },
+        "to": [{
+          "set_variable": {
+            "name": "eisuu_down",
+            "value": 1
+          }
+        }],
+        "to_after_key_up": [{
+          "set_variable": {
+            "name": "eisuu_down",
+            "value": 0
+          }
+        }],
+        "to_if_alone": [{
+          "key_code": "japanese_eisuu"
+        }]
+      },
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "y"
+        },
+        "to": [{
+          "key_code": "equal_sign"
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "u"
+        },
+        "to": [{
+          "key_code": "hyphen"
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "i"
+        },
+        "to": [{
+          "key_code": "hyphen",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "o"
+        },
+        "to": [{
+          "key_code": "2",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "p"
+        },
+        "to": [{
+          "key_code": "4",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "h"
+        },
+        "to": [{
+          "key_code": "close_bracket",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "j"
+        },
+        "to": [{
+          "key_code": "close_bracket"
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "k"
+        },
+        "to": [{
+          "key_code": "8",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "l"
+        },
+        "to": [{
+          "key_code": "9",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "semicolon"
+        },
+        "to": [{
+          "key_code": "backslash"
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "quote"
+        },
+        "to": [{
+          "key_code": "backslash",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "n"
+        },
+        "to": [{
+          "key_code": "6",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "m"
+        },
+        "to": [{
+          "key_code": "3",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "comma"
+        },
+        "to": [{
+          "key_code": "international3",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "period"
+        },
+        "to": [{
+          "key_code": "5",
+          "modifiers": ["left_shift"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }, {
+        "type": "basic",
+        "from": {
+          "key_code": "slash"
+        },
+        "to": [{
+          "key_code": "international3",
+          "modifiers": ["left_alt"]
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "eisuu_down",
+          "value": 1
+        }]
+      }
+    ]
+  }]
+}
